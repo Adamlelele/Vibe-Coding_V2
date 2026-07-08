@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="面向投资人的战略投资研究终端" />
+    <title>战略投资研究终端</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">IR</div>
+          <div>
+            <div class="brand-title">Strategic Research</div>
+            <div class="brand-subtitle">Investor-facing terminal</div>
+          </div>
+        </div>
+        <nav class="nav" aria-label="主导航">
+          <button class="nav-item active" data-page="overview">投资概览</button>
+          <button class="nav-item" data-page="themes">主题库</button>
+          <button class="nav-item" data-page="company">公司研究</button>
+          <button class="nav-item" data-page="boards">板块观察</button>
+          <button class="nav-item" data-page="reports">研报库</button>
+        </nav>
+        <div class="meta">2026-07-07</div>
+      </header>
+
+      <main>
+        <section id="overview" class="page active">
+          <section class="hero">
+            <div>
+              <p class="eyebrow">Investment Research Terminal</p>
+              <h1>战略投资研究终端</h1>
+              <p class="hero-copy">
+                面向公司内外投资人的多赛道研究界面，覆盖硬科技与人工智能、新能源与绿色低碳、未来产业、民生刚需与银发经济。
+              </p>
+            </div>
+            <div class="hero-panel">
+              <div class="status-line"><span></span>Research workspace</div>
+              <strong>Public demo data</strong>
+              <p>当前为样例评分与研究框架，正式展示前替换为真实行情、财务、订单、资金流和研报数据。</p>
+            </div>
+          </section>
+
+          <section class="kpi-grid" id="overview-kpis"></section>
+
+          <section class="split-grid">
+            <div class="panel">
+              <div class="panel-head">
+                <h2>四大主线评分</h2>
+                <span>Risk-adjusted</span>
+              </div>
+              <div id="pillar-bars" class="bar-list"></div>
+            </div>
+            <div class="panel">
+              <div class="panel-head">
+                <h2>机会-风险矩阵</h2>
+                <span>Opportunity vs Risk</span>
+              </div>
+              <div id="scatter-plot" class="scatter"></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <h2>主题优先级</h2>
+              <span>Investor summary</span>
+            </div>
+            <div class="table-wrap">
+              <table id="theme-table"></table>
+            </div>
+          </section>
+        </section>
+
+        <section id="themes" class="page">
+          <section class="page-title">
+            <p class="eyebrow">Theme Library</p>
+            <h1>主题库</h1>
+            <p>比较不同赛道的置信度、业绩可见度、政策支持、资金热度、估值压力和风险分。</p>
+          </section>
+          <div class="toolbar">
+            <input id="theme-search" type="search" placeholder="搜索主题、赛道或逻辑..." />
+            <select id="pillar-filter"></select>
+          </div>
+          <section class="theme-layout">
+            <div class="panel">
+              <div id="theme-cards" class="theme-cards"></div>
+            </div>
+            <aside class="panel sticky-panel">
+              <div class="panel-head">
+                <h2 id="theme-detail-title">主题详情</h2>
+                <span id="theme-detail-score"></span>
+              </div>
+              <div id="theme-detail"></div>
+            </aside>
+          </section>
+        </section>
+
+        <section id="company" class="page">
+          <section class="page-title">
+            <p class="eyebrow">Company Research</p>
+            <h1>公司研究工作台</h1>
+            <p>把单家公司拆成产品、技术、销售、市场、供应链、财务和资本运作七个模块，形成可复用尽调底稿。</p>
+          </section>
+          <section class="split-grid">
+            <div class="panel">
+              <div class="panel-head">
+                <h2>模块权重</h2>
+                <span>Framework</span>
+              </div>
+              <div id="company-bars" class="bar-list"></div>
+            </div>
+            <div class="panel">
+              <div class="panel-head">
+                <h2>尽调问题</h2>
+                <span>Checklist</span>
+              </div>
+              <div id="research-checklist" class="checklist"></div>
+            </div>
+          </section>
+        </section>
+
+        <section id="boards" class="page">
+          <section class="page-title">
+            <p class="eyebrow">Market Boards</p>
+            <h1>板块观察</h1>
+            <p>把主题行情、持续性、观察窗口和风险点整理成可检索的板块观察池。</p>
+          </section>
+          <div class="toolbar">
+            <input id="board-search" type="search" placeholder="搜索板块、逻辑或跟踪点..." />
+          </div>
+          <div id="board-grid" class="board-grid"></div>
+        </section>
+
+        <section id="reports" class="page">
+          <section class="page-title">
+            <p class="eyebrow">Research Assets</p>
+            <h1>研报库</h1>
+            <p>统一管理本地研报资产，展示来源、大小和研究用途。静态版仅展示元数据，不直接托管 PDF 原文。</p>
+          </section>
+          <section class="kpi-grid" id="report-kpis"></section>
+          <div class="table-wrap panel">
+            <table id="report-table"></table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./assets/data.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
