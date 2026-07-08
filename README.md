@@ -1,25 +1,17 @@
-# 战略投资研究终端 - Vercel 静态版
+# Strategic Research Investor Memo
 
-这是专门为 GitHub + Vercel 一键部署准备的静态网页版本。
+这是一个可直接部署到 Vercel 的静态投资研究展示页。
 
-它不依赖 Python、Streamlit 或后端服务，所以可以直接按照：
+## 有用文件
 
-1. 上传到 GitHub Public repository
-2. Vercel Import Project
-3. Framework Preset 选择 `Other`
-4. 点击 Deploy
+- `index.html`：核心页面。CSS、JavaScript 和展示数据都已经内嵌，GitHub + Vercel 只上传这个文件也能运行。
+- `vercel.json`：Vercel 静态部署配置，保留即可。
+- `README.md`：项目说明。
 
-来部署。
+## 更新方式
 
-## 文件说明
+1. 修改或替换 `index.html`。
+2. 上传到 GitHub 仓库根目录并 Commit。
+3. Vercel 会自动重新部署。
 
-- `index.html`：网页入口。
-- `assets/styles.css`：页面样式。
-- `assets/script.js`：页面交互和数据渲染逻辑。
-- `assets/data.js`：从原 Streamlit 项目导出的静态数据。
-
-## 注意
-
-部署到 Vercel 时，请只上传这个文件夹里的内容。
-
-不要把原来的 Streamlit 项目一起上传，否则 Vercel 会看到 `app.py`，继续把它当成 Python Function 构建并报错。
+当前页面仍使用样例数据，不构成投资建议。正式对外展示前，应替换为真实公司财务、订单、客户、融资条款、估值依据和研报引用。
